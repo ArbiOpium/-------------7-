@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .translate-btn {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .translate-btn:hover {
+            background-color: #333;
+        }
+        .translated-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Заголовок</h1>
+        <p id="original-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, dicta. Quidem corporis totam nesciunt neque maiores cumque consectetur enim voluptatem, impedit, vero consequuntur quae, quas quod nostrum nulla. Similique, porro!
+        </p>
+        <button class="translate-btn" onclick="translateText()">Перевод</button>
+        <p id="translated-text" class="translated-text" style="display: none;">
+            Перевод: Лорем ипсум долор сит амет, консьектетур адиписицинг элит. Коммоди, дикта. Квидем корпорис тотам несциунт некуе маиорес кумкве консьектетур эним волуптатибус, импедит, веро консеквунтур куае, квас квод нострум нулла. Симилике, порро!
+        </p>
+    </div>
+
+    <script>
+        function translateText() {
+            const translatedText = document.getElementById("translated-text");
+            translatedText.style.display = "block";
+        }
+    </script>
+</body>
+</html>
